@@ -15,15 +15,22 @@ class Main {
             this.changeLanguage();
             $(window).unbind("MsgEvent.navlanguage.json");
         })
-        $("#zn_simple").click(() => {
-            this.changeLanguage("zn");
-        });
-        $("#jp_tag").click(() => {
-            this.changeLanguage("jp");
-        });
-        $(window).resize(()=>{
+        let w = $(window).width() ? $(window).width() as number : 0;
+        if(w>765){
+            $("#zn_simple").click(() => {
+                this.changeLanguage("zn");
+            });
+            $("#jp_tag").click(() => {
+                this.changeLanguage("jp");
+            });
+        }else{
             this.mobileCheck();
-        })
+        }
+        
+        //窗口大小改变时
+        // $(window).resize(()=>{
+        //     this.mobileCheck();
+        // })
     }
 
     private changeLanguage(type: string = "jp"): void {

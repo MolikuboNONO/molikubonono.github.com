@@ -12,15 +12,22 @@ var Main = /** @class */ (function () {
             _this.changeLanguage();
             $(window).unbind("MsgEvent.navlanguage.json");
         });
-        $("#zn_simple").click(function () {
-            _this.changeLanguage("zn");
-        });
-        $("#jp_tag").click(function () {
-            _this.changeLanguage("jp");
-        });
-        $(window).resize(function () {
-            _this.mobileCheck();
-        });
+        var w = $(window).width() ? $(window).width() : 0;
+        if (w > 765) {
+            $("#zn_simple").click(function () {
+                _this.changeLanguage("zn");
+            });
+            $("#jp_tag").click(function () {
+                _this.changeLanguage("jp");
+            });
+        }
+        else {
+            this.mobileCheck();
+        }
+        //窗口大小改变时
+        // $(window).resize(()=>{
+        //     this.mobileCheck();
+        // })
     };
     Main.prototype.changeLanguage = function (type) {
         if (type === void 0) { type = "jp"; }
@@ -73,3 +80,5 @@ var Config = /** @class */ (function () {
 })(jQuery);
 var main = new Main();
 main.initLanguage();
+// $("#downloadF").click(()=>{
+// })
