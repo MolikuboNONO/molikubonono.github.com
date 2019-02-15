@@ -24,10 +24,11 @@ var Main = /** @class */ (function () {
         else {
             this.mobileCheck();
         }
+        $("#mapContainer").height($("#mapContainer").width() * 0.6);
         //窗口大小改变时
-        // $(window).resize(()=>{
-        //     this.mobileCheck();
-        // })
+        $(window).resize(function () {
+            $("#mapContainer").height($("#mapContainer").width() * 0.6);
+        });
     };
     Main.prototype.changeLanguage = function (type) {
         if (type === void 0) { type = "jp"; }
@@ -78,7 +79,23 @@ var Config = /** @class */ (function () {
 /**预加载 */
 (function ($) {
 })(jQuery);
+$(document).ready(function () {
+    loadJScript();
+});
 var main = new Main();
 main.initLanguage();
+function loadJScript() {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "http://api.map.baidu.com/api?v=2.0&ak=C0BVuyE7RGtHMMERU2GYCUzrlPAaAH1B&callback=init";
+    document.body.appendChild(script);
+    console.log("script add");
+}
+function init() {
+    var map = new BMap.Map("mapContainer");
+    var point = new BMap.Point(35.659341, 139.334319);
+    map.centerAndZoom(point, 15);
+    map.enableScrollWheelZoom();
+}
 // $("#downloadF").click(()=>{
 // })
