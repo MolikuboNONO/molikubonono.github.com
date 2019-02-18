@@ -97,5 +97,12 @@ function init() {
     map.centerAndZoom(point, 15);
     map.enableScrollWheelZoom();
 }
+/**下载 */
+$("#btn1").click(function () {
+    window.location.href = "/excel/Nav.xlsx";
+});
+$("#btn2").click(function () {
+    window.location.href = "/excel/Nav.xlsx";
+});
 // $("#downloadF").click(()=>{
 // })

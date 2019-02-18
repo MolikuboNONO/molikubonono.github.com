@@ -27,6 +27,7 @@ class Main {
             this.mobileCheck();
         }
 
+
         $("#mapContainer").height(($("#mapContainer").width() as number) * 0.6);
         
         //窗口大小改变时
@@ -102,6 +103,15 @@ function init() {
     map.centerAndZoom(point,15);
     map.enableScrollWheelZoom();
 }
+
+/**下载 */
+$("#btn1").click(()=>{
+    window.location.href="/excel/Nav.xlsx";
+});
+
+$("#btn2").click(()=>{
+    window.location.href="/excel/Nav.xlsx";
+});
 
 // $("#downloadF").click(()=>{
 
