@@ -1445,7 +1445,7 @@ div#preloader {
 /*  11. Footer Area
 /*----------------------------------------*/
 .footer-area {
-    padding: 100px 0;
+    padding: 30px 0;
 	background: #894e54;
 }
 .footer-logo{
@@ -2467,6 +2467,15 @@ span.email-notes{
 }
 .game-details-page .product-name{
 	text-align: left;
+}
+.info-td-1{
+    text-align: right;
+    color: orange;
+    font-size: 20px;
+}
+.info-td-2{
+    text-align: left;
+    font-size: 20px;
 }
 /*--------------------------------*/
 /* .End CSS
