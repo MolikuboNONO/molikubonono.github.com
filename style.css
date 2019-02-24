@@ -2472,10 +2472,23 @@ span.email-notes{
     text-align: right;
     color: orange;
     font-size: 20px;
+    transition: 1s;
+    vertical-align: top;
+}
+.info-td-1:hover{
+    background-color:rgba(209, 173, 216, 0.5);
 }
 .info-td-2{
     text-align: left;
     font-size: 20px;
+    transition: 1s;
+    vertical-align: top;
+}
+.info-td-2:hover{
+    background-color:rgba(209, 173, 216, 0.5);
+}
+.tableInfo td{
+    padding: 10px;
 }
 /*--------------------------------*/
 /* .End CSS
