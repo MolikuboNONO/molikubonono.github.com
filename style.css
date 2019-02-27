@@ -647,7 +647,7 @@ div#preloader {
     z-index: 1;
 }
 .intro-content::after {
-    background: rgba(16,30,44,0.7) none repeat scroll 0 0;
+    background: rgba(16,30,44,0.5) none repeat scroll 0 0;
     content: "";
     height: 100%;
     left: 0;
@@ -1288,11 +1288,12 @@ div#preloader {
     border-radius: 0;
     display: block;
     font-weight: 600;
-    padding: 7px 20px 16px;
+    /* padding: 7px 10px 16px; */
     color: #fff;
     border: 1px solid none;
     box-shadow: 5px 5px 10px #5f393d, -5px -5px 10px #5f393d;
     margin: 10px 0px;
+    text-align: center
 }
 .tab-menu .nav-tabs{
 	border-bottom: none;
@@ -1320,7 +1321,6 @@ div#preloader {
 .title-date {
     display: inline-block;
     position: relative;
-    top: 15px;
 }
 .cha-title {
     display: block;
