@@ -2560,10 +2560,40 @@ span.email-notes{
     transition: 1s;
     margin-bottom: 8px;
 }
-
+.page3Desc .roleDesc{
+    text-align: center;
+}
+.page3Desc .roleDesc img{
+    padding-bottom: 20px;
+}
+.page3Desc .roleDesc h3{
+    color: #535353;
+}
+.page3Desc .roleText{
+    padding-top: 30px;
+}
+.page3Desc .roleText p{
+    font-size: 20px;
+    color: #535353;
+}
 
 .page3-1{
     padding: 20px;
+}
+.table th{
+    text-align: center;
+}
+.tableForm{
+    text-align: center;
+    color:  #3b2d2d;
+}
+.tableForm td{
+    border: #000 1px solid;
+}
+
+.p3Hint span{
+    line-height: 50px;
+    color: #535353 !important;
 }
 
 /*--------------------------------*/
