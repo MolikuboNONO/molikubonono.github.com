@@ -2582,6 +2582,7 @@ span.email-notes{
 }
 .table th{
     text-align: center;
+    border: #000 1px solid !important;
 }
 .tableForm{
     text-align: center;
@@ -2590,6 +2591,7 @@ span.email-notes{
 .tableForm td{
     border: #000 1px solid;
 }
+
 
 .p3Hint span{
     line-height: 50px;
