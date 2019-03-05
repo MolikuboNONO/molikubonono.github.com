@@ -83,20 +83,28 @@ $(document).ready(function () {
     loadJScript();
 });
 var main = new Main();
+var map;
 main.initLanguage();
 function loadJScript() {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src = "http://api.map.baidu.com/api?v=2.0&ak=C0BVuyE7RGtHMMERU2GYCUzrlPAaAH1B&callback=init";
+    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDxBRg8C8V7GoqUPGUTcmyeOgAoT4gDIBE&callback=initialize";
     document.body.appendChild(script);
     console.log("script add");
 }
-function init() {
-    var map = new BMap.Map("mapContainer");
-    var point = new BMap.Point(35.659341, 139.334319);
-    map.centerAndZoom(point, 15);
-    map.enableScrollWheelZoom();
+function initialize() {
+    // let mapProp = {
+    //     center: new google.maps.LatLng(35.659341, 139.334319),
+    //     zoom: 7,
+    //     mapTypeId: google.maps.MapTypeId.ROADMAP
+    // };
+    // let  map=new google.maps.Map(document.getElementById("mapContainer"));
+    map = new google.maps.Map(document.getElementById("mapContainer"), {
+        center: { lat: 35.659341, lng: 139.334319 },
+        zoom: 15
+    });
 }
+google.maps.event.addDomListener(window, "load", initialize);
 /**下载 */
 $("#btn1").click(function () {
     window.location.href = "/downloadFile/enrollment.pdf";

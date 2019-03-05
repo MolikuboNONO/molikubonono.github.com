@@ -6,7 +6,7 @@ class Main {
 
     /**语言配置 */
     private lConfig: any;
-    private bindEl:string[][] = [["#zn_simple_m","zn"],["#jp_tag_m","jp"]];
+    private bindEl: string[][] = [["#zn_simple_m", "zn"], ["#jp_tag_m", "jp"]];
 
     public initLanguage(): void {
         Config.getConfig("navlanguage.json");
@@ -16,22 +16,22 @@ class Main {
             $(window).unbind("MsgEvent.navlanguage.json");
         })
         let w = $(window).width() ? $(window).width() as number : 0;
-        if(w>765){
+        if (w > 765) {
             $("#zn_simple").click(() => {
                 this.changeLanguage("zn");
             });
             $("#jp_tag").click(() => {
                 this.changeLanguage("jp");
             });
-        }else{
+        } else {
             this.mobileCheck();
         }
 
 
         $("#mapContainer").height(($("#mapContainer").width() as number) * 0.6);
-        
+
         //窗口大小改变时
-        $(window).resize(()=>{
+        $(window).resize(() => {
             $("#mapContainer").height(($("#mapContainer").width() as number) * 0.6);
         })
     }
@@ -49,9 +49,9 @@ class Main {
         let w = $(window).width();
         if (typeof (w) == "undefined") w = 0;
         if (w <= 767) {
-            for(let i of this.bindEl){
+            for (let i of this.bindEl) {
                 $(i[0]).unbind();
-                $(i[0]).click(()=>{
+                $(i[0]).click(() => {
                     this.changeLanguage(i[1]);
                 });
             }
@@ -81,36 +81,44 @@ class Config {
 
 })(jQuery);
 
-$(document).ready(()=>{
+$(document).ready(() => {
     loadJScript();
 });
 
 let main = new Main();
+let map;
 main.initLanguage();
 
 function loadJScript() {
     let script = document.createElement("script");
     script.type = "text/javascript";
-    script.src = "http://api.map.baidu.com/api?v=2.0&ak=C0BVuyE7RGtHMMERU2GYCUzrlPAaAH1B&callback=init";
+    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDxBRg8C8V7GoqUPGUTcmyeOgAoT4gDIBE&callback=initialize";
     document.body.appendChild(script);
     console.log("script add");
-    
+
 }
 
-function init() {
-    let map = new BMap.Map("mapContainer");
-    let point = new BMap.Point(35.659341, 139.334319);
-    map.centerAndZoom(point,15);
-    map.enableScrollWheelZoom();
+function initialize() {
+    // let mapProp = {
+    //     center: new google.maps.LatLng(35.659341, 139.334319),
+    //     zoom: 7,
+    //     mapTypeId: google.maps.MapTypeId.ROADMAP
+    // };
+    // let  map=new google.maps.Map(document.getElementById("mapContainer"));
+    map = new google.maps.Map(document.getElementById("mapContainer"),{
+        center:{lat:35.659341,lng:139.334319},
+        zoom:15
+    })
 }
+google.maps.event.addDomListener(window,"load",initialize);
 
 /**下载 */
-$("#btn1").click(()=>{
-    window.location.href="/downloadFile/enrollment.pdf";
+$("#btn1").click(() => {
+    window.location.href = "/downloadFile/enrollment.pdf";
 });
 
-$("#btn2").click(()=>{
-    window.location.href="/downloadFile/desc.pdf";
+$("#btn2").click(() => {
+    window.location.href = "/downloadFile/desc.pdf";
 });
 
 // $("#downloadF").click(()=>{
