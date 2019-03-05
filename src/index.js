@@ -80,7 +80,7 @@ var Config = /** @class */ (function () {
 (function ($) {
 })(jQuery);
 $(document).ready(function () {
-    loadJScript();
+    // loadJScript();
 });
 var main = new Main();
 var map;
@@ -88,7 +88,7 @@ main.initLanguage();
 function loadJScript() {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDxBRg8C8V7GoqUPGUTcmyeOgAoT4gDIBE&callback=initialize";
+    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzC8V7GoqUPGUTcmyeOgAoT4gDIBE&callback=initialize";
     document.body.appendChild(script);
     console.log("script add");
 }

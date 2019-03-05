@@ -82,7 +82,7 @@ class Config {
 })(jQuery);
 
 $(document).ready(() => {
-    loadJScript();
+    // loadJScript();
 });
 
 let main = new Main();
@@ -92,7 +92,7 @@ main.initLanguage();
 function loadJScript() {
     let script = document.createElement("script");
     script.type = "text/javascript";
-    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDxBRg8C8V7GoqUPGUTcmyeOgAoT4gDIBE&callback=initialize";
+    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzC8V7GoqUPGUTcmyeOgAoT4gDIBE&callback=initialize";
     document.body.appendChild(script);
     console.log("script add");
 
