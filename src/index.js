@@ -102,7 +102,7 @@ $("#btn1").click(function () {
     window.location.href = "/downloadFile/enrollment.pdf";
 });
 $("#btn2").click(function () {
-    window.location.href = "/downloadFile/application.docx";
+    window.location.href = "/downloadFile/desc.pdf";
 });
 // $("#downloadF").click(()=>{
 // })

@@ -110,7 +110,7 @@ $("#btn1").click(()=>{
 });
 
 $("#btn2").click(()=>{
-    window.location.href="/downloadFile/application.docx";
+    window.location.href="/downloadFile/desc.pdf";
 });
 
 // $("#downloadF").click(()=>{
