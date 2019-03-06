@@ -106,7 +106,7 @@ function init() {
 
 /**下载 */
 $("#btn1").click(()=>{
-    window.location.href="/downloadFile/Nav.xlsx";
+    window.location.href="/downloadFile/enrollment.pdf";
 });
 
 $("#btn2").click(()=>{

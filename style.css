@@ -2550,6 +2550,11 @@ span.email-notes{
     margin-bottom: 8px;
 }
 
+.litext{
+    font-size: 20px;
+    color: #535353 !important;
+}
+
 .page3Desc ul li:hover{
     background-color: rgba(255, 201, 51, 0.5);
 }
