@@ -29,9 +29,10 @@ class Main {
 
 
         $("#mapContainer").height(($("#mapContainer").width() as number) * 0.6);
-
+        $("#mMessage").width($("#mSubject").width() as number);
         //窗口大小改变时
         $(window).resize(() => {
+            $("#mMessage").width($("#mSubject").width() as number);
             $("#mapContainer").height(($("#mapContainer").width() as number) * 0.6);
         })
     }
@@ -82,7 +83,7 @@ class Config {
 })(jQuery);
 
 $(document).ready(() => {
-    loadJScript();
+    // loadJScript();
 });
 
 let main = new Main();
@@ -104,9 +105,9 @@ function initialize() {
     //     zoom: 7,
     //     mapTypeId: google.maps.MapTypeId.ROADMAP
     // };
-    let  map=new google.maps.Map(document.getElementById("mapContainer"),{
-        center:{lat:35.659341,lng:139.334319},
-        zoom:15
+    let map = new google.maps.Map(document.getElementById("mapContainer"), {
+        center: { lat: 35.659341, lng: 139.334319 },
+        zoom: 15
     });
     // let gps = [35.659341, 139.334319];
     // let resultL = [0, 0];
@@ -123,7 +124,7 @@ function initialize() {
     //     resizeEnable: true,
     // });
 }
-google.maps.event.addDomListener(window, 'load', initialize);
+// google.maps.event.addDomListener(window, 'load', initialize);
 /**下载 */
 $("#btn1").click(() => {
     window.location.href = "/downloadFile/enrollment.pdf";

@@ -2616,6 +2616,32 @@ span.email-notes{
     color: #000;
     margin-bottom: 0px;
 }
+.qrCode{
+    max-width: 200px;
+    margin: 10px;
+}
+.mailForm{
+       
+}
+.mailForm label{
+    color: #000;
+}
+.mailForm textarea{
+    color: #000 !important;
+}
+.descP{
+   padding-bottom: 50px;
+}
+.dName{
+    padding-top: 50px;
+    text-align: right;
+}
+.dName .h3_d1{
+    padding-right: 30px;
+}
+.dName .h3_d2{
+    color: #663030 !important;
+}
 
 /*--------------------------------*/
 /* .End CSS

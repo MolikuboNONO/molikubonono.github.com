@@ -479,10 +479,9 @@
 .logo {
     height: inherit;
     left: -20px;
-    padding: 0;
     position: absolute;
     z-index: 999999;
-    max-width: 250px;
+    max-width: 240px;
 }
 .logo a {
     padding: 0px;

@@ -25,8 +25,10 @@ var Main = /** @class */ (function () {
             this.mobileCheck();
         }
         $("#mapContainer").height($("#mapContainer").width() * 0.6);
+        $("#mMessage").width($("#mSubject").width());
         //窗口大小改变时
         $(window).resize(function () {
+            $("#mMessage").width($("#mSubject").width());
             $("#mapContainer").height($("#mapContainer").width() * 0.6);
         });
     };
@@ -80,7 +82,7 @@ var Config = /** @class */ (function () {
 (function ($) {
 })(jQuery);
 $(document).ready(function () {
-    loadJScript();
+    // loadJScript();
 });
 var main = new Main();
 var map;
@@ -116,7 +118,7 @@ function initialize() {
     //     resizeEnable: true,
     // });
 }
-google.maps.event.addDomListener(window, 'load', initialize);
+// google.maps.event.addDomListener(window, 'load', initialize);
 /**下载 */
 $("#btn1").click(function () {
     window.location.href = "/downloadFile/enrollment.pdf";
