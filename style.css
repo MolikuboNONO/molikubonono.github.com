@@ -2612,6 +2612,10 @@ span.email-notes{
 .paperOl{
     padding-top: 20px;
 }
+.hintText p{
+    color: #000;
+    margin-bottom: 0px;
+}
 
 /*--------------------------------*/
 /* .End CSS
