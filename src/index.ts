@@ -133,6 +133,15 @@ $("#btn2").click(() => {
     window.location.href = "/downloadFile/desc.pdf";
 });
 
+$("#m_nav_6").click(() => {
+    window.location.href = "index.html"
+    $("html,body").animate({ scrollTop: $("#DLFile").offset().top }, 1000);
+})
+$("#nav_6").click(() => {
+    window.location.href = "index.html"
+    $("html,body").animate({ scrollTop: $("#DLFile").offset().top }, 1000);
+})
+
 
 // $("#downloadF").click(()=>{
 
