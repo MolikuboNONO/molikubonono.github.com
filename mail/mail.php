@@ -16,7 +16,7 @@
     $smtppass = "tewkvfvkqpudgfef";                        //SMTP服务器的秘钥 
     $mailtitle = $_POST['mSubject'];                        //邮件主题 
     $mailcontent = "<h1>".$_POST['mMessage']."</h1>";    //邮件内容 
-    $mailtype = "TXT";                                    //邮件格式（HTML/TXT）,TXT为文本邮件 
+    $mailtype = "HTML";                                    //邮件格式（HTML/TXT）,TXT为文本邮件 
     //************************ 配置信息 ****************************
      
     
