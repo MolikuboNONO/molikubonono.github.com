@@ -7,7 +7,7 @@ name = Request.Form("mName")
 senderEmail = Request.Form("mMail")
 other=request.Form("other")
 subject = "Re:" & Request.Form("mSubject")
-body = Request.Form("body")
+body = Request.Form("mMessage");
 
 if name <> "" and senderEmail <> "" and body<>"" then
 
@@ -26,8 +26,8 @@ msg.Charset = "gb2312"
 msg.From = senderEmail
 msg.FromName = name
 ' smtp认证的关键
-msg.mailserverusername="info@123.com" ‘邮箱账户，需完整地址
-msg.mailserverpassword="password" '输入你的邮箱密码
+msg.mailserverusername="1131890142@qq.com"
+msg.mailserverpassword="tewkvfvkqpudgfef" '输入你的邮箱密码
 
 ' 将收信人的资料加入组件
 msg.AddRecipient recipient
@@ -39,7 +39,7 @@ msg.Subject = subject
 msg.body = body & vbcrlf & vbcrlf & "其他联系方式：" & other
 
 ' 送出表单资料为电子邮件 ,并指定发信服务器 SMTP
-if not msg.Send("mail.123.com" ) then
+if not msg.Send("smtp.qq.com" ) then
 Response.write "<pre>" & msg.log & "</pre>"
 else
 Response.write "信件成功寄出,谢谢您的留言!!"
