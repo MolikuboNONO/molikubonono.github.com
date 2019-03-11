@@ -127,11 +127,13 @@ $("#btn2").click(function () {
     window.location.href = "/downloadFile/desc.pdf";
 });
 $("#m_nav_6").click(function () {
-    window.location.href = "index.html";
+    if (window.location.pathname != "/index.html")
+        window.location.href = "index.html";
     $("html,body").animate({ scrollTop: $("#DLFile").offset().top }, 1000);
 });
 $("#nav_6").click(function () {
-    window.location.href = "index.html";
+    if (window.location.pathname != "/index.html")
+        window.location.href = "index.html";
     $("html,body").animate({ scrollTop: $("#DLFile").offset().top }, 1000);
 });
 // $("#downloadF").click(()=>{
