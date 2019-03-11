@@ -152,10 +152,10 @@
 					<img src="./img/icon/texture_1.png" alt="">
 				</div>
 				<div class="col-md-7 col-sm-7 col-xs-12 mailForm">
-					<form role="form" action="./mail/mail.php" method="GET">
+					<form role="form" action="mailto:1131890142@qq.com" method="post" enctype="text/plain">
 						<div class="form-group">
 							<label for="mName">お名前</label>
-							<input type="text" class="form-control" id="mName" />
+							<input name="" type="text" class="form-control" id="mName" />
 						</div>
 						<div class="form-group">
 							<label for="mMail">メールアドレス</label>
@@ -163,11 +163,11 @@
 						</div>
 						<div class="form-group">
 							<label for="mSubject">テーマ</label>
-							<input type="text" class="form-control" id="mSubject" />
+							<input type="text" name="subject" class="form-control" id="mSubject" />
 						</div>
 						<div class="form-group">
 							<label for="mMessage">メッセージ</label>
-							<textarea name="" id="mMessage" rows="6" class=""></textarea>
+							<textarea name="body" id="mMessage" rows="6" class=""></textarea>
 							<!-- <input type="text" class="form-control message" id="mMessage" /> -->
 						</div>
 						<button type="submit" class="btn btn-default">送信</button>
