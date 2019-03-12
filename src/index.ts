@@ -93,8 +93,8 @@ main.initLanguage();
 function loadJScript() {
     let script = document.createElement("script");
     script.type = "text/javascript";
-    script.src = "https://webapi.amap.com/maps?v=1.4.13&key=0afd1addecce908b9fc5088baa698412&callback=initialize";
-    // script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDxBRg8C8V7GoqUPGUTcmyeOgAoT4gDIBE&callback=initialize";
+    // script.src = "https://webapi.amap.com/maps?v=1.4.13&key=0afd1addecce908b9fc5088baa698412&callback=initialize";
+    // script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAkcOQtadQWXAeaf392-XhbYekaj3qoZMQ&callback=initialize";
     document.body.appendChild(script);
     console.log("script add");
 
@@ -106,24 +106,24 @@ function initialize() {
     //     zoom: 7,
     //     mapTypeId: google.maps.MapTypeId.ROADMAP
     // };
-    // let map = new google.maps.Map(document.getElementById("mapContainer_1"), {
-    //     center: { lat: 35.659341, lng: 139.334319 },
-    //     zoom: 15
+    let map = new google.maps.Map(document.getElementById("mapContainer_1"), {
+        center: { lat: 35.659341, lng: 139.334319 },
+        zoom: 15
+    });
+    // let gps = [35.659341, 139.334319];
+    // let resultL = [0, 0];
+    // AMap.convertFrom(gps, 'gps', (s, r) => {
+    //     if (r.info === "ok") {
+    //         resultL = [r.locations[0].lat, r.locations[0].lng];
+    //         console.log(resultL);
+    //     }
     // });
-    let gps = [35.659341, 139.334319];
-    let resultL = [0, 0];
-    AMap.convertFrom(gps, 'gps', (s, r) => {
-        if (r.info === "ok") {
-            resultL = [r.locations[0].lat, r.locations[0].lng];
-            console.log(resultL);
-        }
-    });
-    let map = new AMap.Map("mapContainer_1", {
-        zoom: 15,
-        resizeEnable: true,
-    });
+    // let map = new AMap.Map("mapContainer_1", {
+    //     zoom: 15,
+    //     resizeEnable: true,
+    // });
 }
-// google.maps.event.addDomListener(window, 'load', initialize);
+google.maps.event.addDomListener(window, 'load', initialize);
 /**下载 */
 $("#btn1").click(() => {
     window.location.href = "/downloadFile/enrollment.pdf";

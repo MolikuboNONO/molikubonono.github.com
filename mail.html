@@ -152,22 +152,22 @@
 					<img src="./img/icon/texture_1.png" alt="">
 				</div>
 				<div class="col-md-7 col-sm-7 col-xs-12 mailForm">
-					<form role="form" action="mailto:1131890142@qq.com" method="post" enctype="text/plain">
+					<form role="form" action="./mail/email.php" method="post">
 						<div class="form-group">
 							<label for="mName">お名前</label>
-							<input name="" type="text" class="form-control" id="mName" />
+							<input name="mName" type="text" class="form-control" id="mName" />
 						</div>
 						<div class="form-group">
 							<label for="mMail">メールアドレス</label>
-							<input type="email" class="form-control" id="mMail" />
+							<input type="email" name="mMail" class="form-control" id="mMail" />
 						</div>
 						<div class="form-group">
 							<label for="mSubject">テーマ</label>
-							<input type="text" name="subject" class="form-control" id="mSubject" />
+							<input type="text" name="subject" class="form-control" id="subject" />
 						</div>
 						<div class="form-group">
 							<label for="mMessage">メッセージ</label>
-							<textarea name="body" id="mMessage" rows="6" class=""></textarea>
+							<textarea name="mMessage" id="mMessage" rows="6" class=""></textarea>
 							<!-- <input type="text" class="form-control message" id="mMessage" /> -->
 						</div>
 						<button type="submit" class="btn btn-default">送信</button>
@@ -219,7 +219,7 @@
 							<ul class="qrIcon">
 								<li>
 									<div class="qrCode">
-										<img src="./img/qc/personalqq.png" alt="">
+										<img src="./img/qc/code_1.png" alt="">
 									</div>
 									<p>オフィシャル<br>ウィチャット</p>
 									<div class="qrIcon_cycle" id="qr_1"><img src="./img/qc/qq.png" alt="" id="qrc_1" />
@@ -235,7 +235,7 @@
 								</li>
 								<li>
 									<div class="qrCode">
-										<img src="./img/qc/personalqq.png" alt="">
+										<img src="./img/qc/personalwechat.png" alt="">
 									</div>
 									<p>個人ウィチャット</p>
 									<div class="qrIcon_cycle" id="qr_3"><img src="./img/qc/wechat.png" alt=""
