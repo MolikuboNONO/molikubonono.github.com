@@ -25,10 +25,10 @@ var Main = /** @class */ (function () {
             this.mobileCheck();
         }
         $("#mapContainer_1").height($("#mapContainer_1").width() * 0.6);
-        $("#mMessage").width($("#mSubject").width());
+        $("#mMessage").width($("#subject").width());
         //窗口大小改变时
         $(window).resize(function () {
-            $("#mMessage").width($("#mSubject").width());
+            $("#mMessage").width($("#subject").width());
             $("#mapContainer_1").height($("#mapContainer_1").width() * 0.6);
         });
     };
