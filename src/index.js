@@ -118,7 +118,7 @@ function initialize() {
     //     resizeEnable: true,
     // });
 }
-google.maps.event.addDomListener(window, 'load', initialize);
+// google.maps.event.addDomListener(window, 'load', initialize);
 /**下载 */
 $("#btn1").click(function () {
     window.location.href = "/downloadFile/enrollment.pdf";
