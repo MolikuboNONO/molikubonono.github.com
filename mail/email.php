@@ -18,9 +18,9 @@ $smtpuser = "1131890142@qq.com";//SMTP服务器的用户帐号
 
 $smtppass = "tewkvkvfqpudgfef";//SMTP服务器的用户密码 
 
-$mailsubject =$_GET["subject"];//邮件主题 
+$mailsubject =$_POST["subject"];//邮件主题 
 
-$mailbody = $_GET["mMessage"];//邮件内容 
+$mailbody = $_POST["mMessage"];//邮件内容 
 
 $mailtype = "HTML";//邮件格式（HTML/TXT）,TXT为文本邮件 
 
