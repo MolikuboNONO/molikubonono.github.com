@@ -25,7 +25,7 @@ $mailbody = $_GET["mMessage"];//邮件内容
 $mailtype = "HTML";//邮件格式（HTML/TXT）,TXT为文本邮件 
 
 ########################################## 
-
+echo "<script>alert('file load')</script>"
 $smtp = new smtp($smtpserver,$smtpserverport,true,$smtpuser,$smtppass);//这里面的一个true是表示使用身份验证,否则不使用身份验证. 
 
 $smtp->debug = TRUE;//是否显示发送的调试信息 
