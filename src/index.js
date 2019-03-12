@@ -82,7 +82,7 @@ var Config = /** @class */ (function () {
 (function ($) {
 })(jQuery);
 $(document).ready(function () {
-    loadJScript();
+    // loadJScript();
 });
 var main = new Main();
 var map;

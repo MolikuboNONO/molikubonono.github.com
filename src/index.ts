@@ -83,7 +83,7 @@ class Config {
 })(jQuery);
 
 $(document).ready(() => {
-    loadJScript();
+    // loadJScript();
 });
 
 let main = new Main();
