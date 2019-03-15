@@ -69,6 +69,8 @@ var Config = /** @class */ (function () {
 (function ($) {
 })(jQuery);
 $(document).ready(function () {
+    if (window.location.pathname != "/mail.html")
+        return;
     // loadJScript();
 });
 var main = new Main();
@@ -78,8 +80,6 @@ function loadJScript() {
     var script = document.createElement("script");
     script.type = "text/javascript";
     // script.src = "https://webapi.amap.com/maps?v=1.4.13&key=0afd1addecce908b9fc5088baa698412&callback=initialize";
-    // script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAkcOQtadQWXAeaf392-XhbYekaj3qoZMQ&callback=initialize";
-    document.body.appendChild(script);
     console.log("script add");
 }
 function initialize() {
@@ -105,13 +105,13 @@ function initialize() {
     //     resizeEnable: true,
     // });
 }
-// google.maps.event.addDomListener(window, 'load', initialize);
+google.maps.event.addDomListener(window, 'load', initialize);
 /**下载 */
 $("#btn1").click(function () {
-    window.location.href = "/downloadFile/enrollment.pdf";
+    window.location.href = "./downloadFile/enrollment.pdf";
 });
 $("#btn2").click(function () {
-    window.location.href = "/downloadFile/desc.pdf";
+    window.location.href = "./downloadFile/desc.pdf";
 });
 $("#m_nav_6").click(function () {
     if (window.location.pathname != "/index.html")
@@ -119,8 +119,9 @@ $("#m_nav_6").click(function () {
     $("html,body").animate({ scrollTop: $("#DLFile").offset().top }, 1000);
 });
 $("#nav_6").click(function () {
-    if (window.location.pathname != "/index.html")
+    if (window.location.pathname != "/index.html") {
         window.location.href = "index.html";
+    }
     $("html,body").animate({ scrollTop: $("#DLFile").offset().top }, 1000);
 });
 // $("#downloadF").click(()=>{
