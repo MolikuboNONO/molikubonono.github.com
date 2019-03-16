@@ -5,25 +5,23 @@ var Main = /** @class */ (function () {
         this.bindEl = [["#zn_simple_m", "zn"], ["#jp_tag_m", "jp"]];
     }
     Main.prototype.initLanguage = function () {
-        var _this = this;
-        Config.getConfig("navlanguage.json");
-        $(window).bind("MsgEvent.navlanguage.json", function (evt, data) {
-            _this.lConfig = data;
-            _this.changeLanguage();
-            $(window).unbind("MsgEvent.navlanguage.json");
-        });
-        var w = $(window).width() ? $(window).width() : 0;
-        if (w > 765) {
-            $("#zn_simple").click(function () {
-                _this.changeLanguage("zn");
-            });
-            $("#jp_tag").click(function () {
-                _this.changeLanguage("jp");
-            });
-        }
-        else {
-            this.mobileCheck();
-        }
+        // Config.getConfig("navlanguage.json");
+        // $(window).bind("MsgEvent.navlanguage.json", (evt, data) => {
+        //     this.lConfig = data;
+        //     this.changeLanguage();
+        //     $(window).unbind("MsgEvent.navlanguage.json");
+        // })
+        // let w = $(window).width() ? $(window).width() as number : 0;
+        // if (w > 765) {
+        //     $("#zn_simple").click(() => {
+        //         this.changeLanguage("zn");
+        //     });
+        //     $("#jp_tag").click(() => {
+        //         this.changeLanguage("jp");
+        //     });
+        // } else {
+        //     this.mobileCheck();
+        // }
         $("#mapContainer_1").height($("#mapContainer_1").width() * 0.6);
         $("#mMessage").width($("#subject").width());
         //窗口大小改变时
@@ -65,17 +63,6 @@ var Main = /** @class */ (function () {
 var Config = /** @class */ (function () {
     function Config() {
     }
-    Config.getConfig = function (cName) {
-        var str = "./excel/config/client/";
-        $.getJSON(str + cName, function (data) {
-            if (!data) {
-                console.log(cName + " config is miss or error");
-            }
-            else {
-                $(window).trigger("MsgEvent." + cName, data);
-            }
-        });
-    };
     return Config;
 }());
 /**预加载 */

@@ -4,7 +4,7 @@
 <head>
 	<meta charset="iso-2022-jp">
 	<!-- <meta http-equiv="x-ua-compatible" content="ie=edge"> -->
-	<!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests;"> -->
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests;">
 	<title>問い合わせ</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
@@ -14,7 +14,8 @@
 	<!-- all css here -->
 
 	<!-- bootstrap v3.3.6 css -->
-	<link rel="stylesheet" type="text/css" href="https://www.jq22.com/jquery/bootstrap-3.3.4.css">
+	<!-- <link rel="stylesheet" type="text/css" href="https://www.jq22.com/jquery/bootstrap-3.3.4.css"> -->
+	<link rel="stylesheet" href="css/bootstrap.css">
 	<!-- owl.carousel css -->
 	<link rel="stylesheet" href="css/owl.carousel.css">
 	<link rel="stylesheet" href="css/owl.transitions.css">
@@ -153,7 +154,7 @@
 					<img src="./img/icon/texture_1.png" alt="">
 				</div>
 				<div class="col-md-7 col-sm-7 col-xs-12 mailForm">
-					<form role="form" action="./mail/email.php" method="GET">
+					<form role="form" action="./mail/email.php" method="POST">
 						<div class="form-group">
 							<label for="mName">お名前</label>
 							<input name="mName" type="text" class="form-control" id="mName" />

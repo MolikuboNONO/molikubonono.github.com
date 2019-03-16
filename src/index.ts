@@ -9,23 +9,23 @@ class Main {
     private bindEl: string[][] = [["#zn_simple_m", "zn"], ["#jp_tag_m", "jp"]];
 
     public initLanguage(): void {
-        Config.getConfig("navlanguage.json");
-        $(window).bind("MsgEvent.navlanguage.json", (evt, data) => {
-            this.lConfig = data;
-            this.changeLanguage();
-            $(window).unbind("MsgEvent.navlanguage.json");
-        })
-        let w = $(window).width() ? $(window).width() as number : 0;
-        if (w > 765) {
-            $("#zn_simple").click(() => {
-                this.changeLanguage("zn");
-            });
-            $("#jp_tag").click(() => {
-                this.changeLanguage("jp");
-            });
-        } else {
-            this.mobileCheck();
-        }
+        // Config.getConfig("navlanguage.json");
+        // $(window).bind("MsgEvent.navlanguage.json", (evt, data) => {
+        //     this.lConfig = data;
+        //     this.changeLanguage();
+        //     $(window).unbind("MsgEvent.navlanguage.json");
+        // })
+        // let w = $(window).width() ? $(window).width() as number : 0;
+        // if (w > 765) {
+        //     $("#zn_simple").click(() => {
+        //         this.changeLanguage("zn");
+        //     });
+        //     $("#jp_tag").click(() => {
+        //         this.changeLanguage("jp");
+        //     });
+        // } else {
+        //     this.mobileCheck();
+        // }
 
 
         $("#mapContainer_1").height(($("#mapContainer_1").width() as number) * 0.6);
@@ -63,16 +63,16 @@ class Main {
 
 /**加载配置文件 */
 class Config {
-    public static getConfig(cName: string): void {
-        let str = "./excel/config/client/";
-        $.getJSON(str + cName, function (data: any) {
-            if (!data) {
-                console.log(cName + " config is miss or error");
-            } else {
-                $(window).trigger("MsgEvent." + cName, data);
-            }
-        })
-    }
+    // public static getConfig(cName: string): void {
+    //     let str = "./excel/config/client/";
+    //     $.getJSON(str + cName, function (data: any) {
+    //         if (!data) {
+    //             console.log(cName + " config is miss or error");
+    //         } else {
+    //             $(window).trigger("MsgEvent." + cName, data);
+    //         }
+    //     })
+    // }
 }
 
 
